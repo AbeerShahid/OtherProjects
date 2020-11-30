@@ -1,0 +1,170 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1671\cocoasubrtf600
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fswiss\fcharset0 Helvetica-Bold;\f2\fnil\fcharset0 Menlo-Regular;
+\f3\fnil\fcharset0 Menlo-Bold;}
+{\colortbl;\red255\green255\blue255;\red89\green138\blue67;\red23\green23\blue23;\red202\green202\blue202;
+\red0\green0\blue0;\red33\green255\blue6;\red212\green214\blue154;\red194\green126\blue101;\red70\green137\blue204;
+\red66\green179\blue255;\red183\green111\blue179;\red140\green211\blue254;\red255\green255\blue255;\red167\green197\blue152;
+\red66\green179\blue255;\red23\green23\blue23;\red202\green202\blue202;\red212\green214\blue154;\red194\green126\blue101;
+\red89\green138\blue67;\red140\green211\blue254;\red70\green137\blue204;\red22\green21\blue22;\red246\green246\blue246;
+}
+{\*\expandedcolortbl;;\cssrgb\c41569\c60000\c33333;\cssrgb\c11765\c11765\c11765;\cssrgb\c83137\c83137\c83137;
+\cssrgb\c0\c0\c0;\cssrgb\c0\c97680\c0;\cssrgb\c86275\c86275\c66667;\cssrgb\c80784\c56863\c47059;\cssrgb\c33725\c61176\c83922;
+\cssrgb\c30980\c75686\c100000;\cssrgb\c77255\c52549\c75294;\cssrgb\c61176\c86275\c99608;\cssrgb\c100000\c100000\c100000;\cssrgb\c70980\c80784\c65882;
+\cssrgb\c30980\c75686\c100000;\cssrgb\c11765\c11765\c11765;\cssrgb\c83137\c83137\c83137;\cssrgb\c86275\c86275\c66667;\cssrgb\c80784\c56863\c47059;
+\cssrgb\c41569\c60000\c33333;\cssrgb\c61176\c86275\c99608;\cssrgb\c33725\c61176\c83922;\cssrgb\c11373\c10980\c11373;\cssrgb\c97255\c97255\c97255;
+}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{none\}}{\leveltext\leveltemplateid1\'00;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 Node js is a c++ written intermediate that uses the V8Engine by chrome to allow js to be run on the server I.e. outside of the browser/client side \'97 it maps functions from js to c++ as c++ can access file systems , I/o  and chrome itself uses the it for client browser elements such as the Dom\
+\
+window  Is a chrome browser specific command  and when executed in the console in browser tools it gives you a print out of the object and functions underneath it. 
+\f1\b Global
+\f0\b0  is the equivalent for nodes\
+\
+Document in the browser console gives access to the Dom, 
+\f1\b process
+\f0\b0  is the node js equivalent\
+e.g. one can use process.exit() to leave the node real.\
+\
+\
+\
+\
+Node module system-\
+\
+\pard\pardeftab720\sl360\partightenfactor0
+
+\f2 \cf2 \cb3 \expnd0\expndtw0\kerning0
+const fs = require('fs');\cf4 \cb1 \
+\pard\pardeftab720\sl360\partightenfactor0
+\cf5 Import from existing modules of node js\
+\
+\pard\pardeftab720\sl360\partightenfactor0
+\cf6 \cb3 require('./utils.js')\cb1 \
+\pard\pardeftab720\sl360\partightenfactor0
+\cf5 Import from custom file \'85 need to give a relative path and needs to start with ./ which means the same directory\
+If pulled in like so any executable code from this utils.js will be executed alongside the code from the file where it is pulled in\
+\
+Each file has its own scope and variables and a `require` of a file does not give you access to its variables. For that to happen you need to expose the variables from the file via an export statement.\
+\pard\pardeftab720\sl360\partightenfactor0
+\cf9 \cb3 const\cf4  \cf10 name\cf4  = \cf8 'Abeer'\cf4 ;\cb1 \
+\
+\cf10 \cb3 module\cf4 .\cf10 exports\cf4  =\cf10 name\cf4 ;\cb1 \
+\
+\pard\pardeftab720\sl360\partightenfactor0
+\cf5 And you need to pull it as a variable of the \'91require`\cf4  \cf9 \cb3 const\cf4  \cf10 name\cf4  = \cf7 require\cf4 (\cf8 './utils.js'\cf4 )\cb1 \
+\
+\
+\pard\pardeftab720\sl360\partightenfactor0
+\cf11 \cb3 import\cf4  \cf12 validator\cf4  \cf11 from\cf4  \cf8 'validator'\cf4 ; \cb1  \cf5 ES6 syntax\cf4 \
+\
+\pard\pardeftab720\sl360\partightenfactor0
+\cf9 \cb3 const\cf4  \cf10 validator\cf4  = \cf7 require\cf4 (\cf8 'validator'\cf4 ); \cf5 \cb13 not ES6 format \
+\
+To start project npm init\
+To install modules from  npm install package name@version\
+\
+Nodemon to constantly reload and run a script after I edit it \'97 \
+To install globally : nom install name@version -g\
+\
+\
+To get access to the arguments given to a program \
+\
+\pard\pardeftab720\sl360\partightenfactor0
+\cf12 \cb3 process\cf4 .\cf12 argv\cf5 \cb13  added to code\cf4 \cb1 \
+I ran \cf5 node app.js Abeer\
+[\
+  '/Users/shahida/.nvm/versions/node/v12.16.1/bin/node',\
+  '/Users/shahida/Desktop/NodeProjects/notes-app/app.js',\
+  'Abeer'\
+]\
+\
+Got the following array back. The first two values are always provided I.e. the path to the node, the path to the current running file app.js\
+\
+And the remaining array elements are things provided as arguments to the program. \
+\
+To access the arguments I can use \cf12 \cb3 process\cf4 \cb3 .\cf12 \cb3 argv[2]\cf5 \cb1 \
+i.e. need to start from index 2 upwards as arrays start at index 0 and the first two values are always taken \
+\
+\
+Yargs is a library that is useful for parsing input from command line and can be configured to do many things\
+With yards `node app.js --help` gives you a listing of all the available commands and version tells you current version you set on yargs or the default\
+\
+Can explicitly add debugger to code\
+node inspect app.js\
+node \'97inspect-bro app.js\
+\
+\
+\
+\pard\pardeftab720\sl360\partightenfactor0
+
+\f3\b \cf5 Call stack
+\f2\b0  is a data structure provided by the v8 engine\
+Tracks the execution of our program -keeps track of all of the functions currently running.\
+Can only add to the top and remove from the top\
+\
+If there is a node function that needs to be executed then it goes to the Node API hence access the V8 engine and the c++ underbelly \
+In the case of a time out being in place it will wait \
+Once the time out is done/ the node api work is done it is moved to the Call back queue \
+\
+Event loop guides items from the callback queue back to the call stack and it does this only when the stack is empty \
+\
+\pard\pardeftab720\sl360\partightenfactor0
+\cf12 \cb3 console\cf4 .\cf7 log\cf4 (\cf8 "Starting"\cf4 )\cb1 \
+\pard\pardeftab720\sl360\partightenfactor0
+\cf7 \cb3 setTimeout\cf4 (()\cf9 =>\cf4 \{\cf12 console\cf4 .\cf7 log\cf4 (\cf8 '2 second timer'\cf4 )\}, \cf14 2000\cf4 ) \cf2 //execute after 2000 miliseconds aka 2 seconds\cf4 \cb1 \
+\cf7 \cb3 setTimeout\cf4 (()\cf9 =>\cf4 \{\cf12 console\cf4 .\cf7 log\cf4 (\cf8 '0 second timer'\cf4 )\}, \cf14 0\cf4 )\cb1 \
+\pard\pardeftab720\sl360\partightenfactor0
+\cf12 \cb3 console\cf4 .\cf7 log\cf4 (\cf8 "Stopping"\cf4 )\cb1 \
+\pard\pardeftab720\sl360\partightenfactor0
+\cf5 \
+Hence when executing the above code the `Stopping prints after than the 0 timeout  function because by the time it is trying to be added back to the loop main is still on the stack and hence the main thread adds and removes the remaining functions to the stack and when it finishes the callback queued items can be added\
+\
+C02Y607AJHD5:weather-app shahida$ node app.js\
+Starting\
+Stopping\
+0 second timer\
+2 second timer\
+\
+\
+\
+Handlebars is a templating engine but a wrapper library that integrates well with express is hbs \
+Place your templates in a folder called views just under the root folder \'97 that is a requirement for this to work. The following code tells express we are using hbs and then sets up a route to the a specific template\
+\
+\pard\pardeftab720\sl360\partightenfactor0
+\cf15 \cb16 \outl0\strokewidth0 \strokec15 app\cf17 \strokec17 .\cf18 \strokec18 set\cf17 \strokec17 (\cf19 \strokec19 'view engine'\cf17 \strokec17 , \cf19 \strokec19 'hbs'\cf17 \strokec17 ) \cf20 \strokec20 // telling express to use the hbs- handlebars\cf17 \cb1 \strokec17 \
+\cf15 \cb16 \strokec15 app\cf17 \strokec17 .\cf18 \strokec18 get\cf17 \strokec17 (\cf19 \strokec19 ''\cf17 \strokec17 , (\cf21 \strokec21 req\cf17 \strokec17 , \cf21 \strokec21 res\cf17 \strokec17 )\cf22 \strokec22 =>\cf17 \strokec17 \{\cb1 \
+\cb16         \cf21 \strokec21 res\cf17 \strokec17 .\cf18 \strokec18 render\cf17 \strokec17 (\cf19 \strokec19 'index'\cf17 \strokec17 ) \cf20 \strokec20 // name needs to match the file in views folder but doesn't need exptension so this refering to index.hbs\cf17 \cb1 \strokec17 \
+\cb16      \})\cb1 \
+\pard\pardeftab720\sl360\partightenfactor0
+\cf5 \outl0\strokewidth0 \
+\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl340\partightenfactor0
+\ls1\ilvl0
+\f0\fs30 \cf23 \cb24 \kerning1\expnd0\expndtw0 		\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec23 Height - almost 5ft 5 \cb1 \
+\ls1\ilvl0\cb24 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 		\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec23 Favourite fruit  - mango\cb1 \
+\ls1\ilvl0\cb24 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 		\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec23 Breakfast of choice - I could probably have noodles anytime of the day\cb1 \
+\ls1\ilvl0\cb24 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 		\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec23 Favourite animal\'a0 - if we are talking domestic cat if we are talking exotic monkey\cb1 \
+\ls1\ilvl0\cb24 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 		\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec23 Age\'a0- 28\cb1 \
+\ls1\ilvl0\cb24 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 		\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec23 Birthday month\'a0- July\cb1 \
+\ls1\ilvl0\cb24 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 		\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec23 Favourite pizza topping\'a0 - chicken\cb1 \
+\ls1\ilvl0\cb24 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 		\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec23 Childhood highlight\'a0 - going on weekend trips with my family to different cities in Ireland  \cb1 \
+\ls1\ilvl0\cb24 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 		\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec23 Favourite holiday destination\'a0- Turkey\cb1 \
+\ls1\ilvl0\cb24 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 		\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec23 What\'92s your coffee order if you were to go to Michalis\'92s favourite coffee shop Farmer J - I\'92ll be honest I don\'92t remember the menu but if we are picking coffee I\'92d go for a mocha or a cappuccino \cb1 \
+\pard\pardeftab720\sl360\partightenfactor0
+
+\f2\fs24 \cf5 \outl0\strokewidth0 \
+\
+}
